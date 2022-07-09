@@ -34,13 +34,10 @@ gen_bat = ""
 for path in paths:
     gen_bat += "javac " + path + '\n' 
 
-gen_bat += "java " + paths[0][:-5] + ' ' + args + '\n'
+gen_bat += "java " + paths[0][2:-5] + ' ' + args + '\n'
 gen_bat += "pause"
 
-result = open("run.txt", "w")
+result = open("run.bat", "w")
 result.write(gen_bat)
 result.close()
 
-f = "run.txt"
-base = os.path.splitext(f)[0]
-os.rename(f, base + ".bat")
