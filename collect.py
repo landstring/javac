@@ -37,7 +37,7 @@ for path in paths:
 gen_bat += "java " + paths[0][:-5] + ' ' + args + '\n'
 gen_bat += "pause"
 
-result = open("run.txt", "w+")
+result = open("run.txt", "w")
 result.write(gen_bat)
 result.close()
 
